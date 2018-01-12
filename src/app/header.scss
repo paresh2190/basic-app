@@ -1,0 +1,52 @@
+ion-header {
+    background: transparent;
+}
+
+.toolbar-background {
+    background: transparent;
+}
+
+.header {
+    &:after {
+        background-image: none;
+    }
+    .toolbar {
+        .toolbar-background {
+            background-color: $primary-color;
+            border-width: 0 !important;
+        }
+    }
+    .title {
+        @include transformY;
+        text-align: center;
+        z-index: 1;
+        left: 0;
+        width: 75%;
+        padding: 0 0px;
+        margin: 0 auto;
+        right: 0;
+        .toolbar-title {
+            padding: 0;
+            color: $white-color;
+            @include font-size($f23-font-size);
+        }
+    }
+    .bar-buttons {
+        height: auto;
+        .bar-button {
+            float: left;
+            margin: 0 3px;
+            color: $white-color;
+            @include media-query-min(400px) {
+                height: auto;
+                margin: 0 3px;
+            }
+            .button-inner {
+                i {
+                    color: $white-color;
+                    @include font-size($f25-font-size);
+                }
+            }
+        }
+    }
+}

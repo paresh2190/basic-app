@@ -1,0 +1,31 @@
+page-swipe-tabs {
+    .slides {
+        height: auto;
+
+        .swiper-container {
+            height: auto;
+
+            .swiper-wrapper {
+                height: auto;
+
+                .slide-zoom {
+                    padding-top: 20px;
+
+                    .tabWrap {
+                        padding: 20px 15px;
+
+                        h1 {
+                            margin-bottom: 30px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

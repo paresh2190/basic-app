@@ -1,0 +1,53 @@
+html,
+body,
+ion-app.md {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-family: $fontRg;
+}
+
+[padding] h1:first-child,
+[padding] h2:first-child,
+[padding] h3:first-child,
+[padding] h4:first-child,
+[padding] h5:first-child,
+[padding] h6:first-child,
+{
+    margin-top: 0;
+}
+
+// common style
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+p {
+    @include font-size($f14-font-size);
+    margin: 0;
+    padding: 0;
+    line-height: 22px;
+    @include media-query-min(560px) {
+        line-height: 30px;
+    }
+}
+
+dd {
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

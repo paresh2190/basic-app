@@ -1,30 +1,11 @@
-// Ionic Variables and Theming. For more info, please see:
-// http://ionicframework.com/docs/theming/
-
-// Font path is used to include ionicons,
-// roboto, and noto sans fonts
-$font-path: "../assets/fonts";
-
-
-// The app direction is used to include
-// rtl styles in your app. For more info, please see:
-// http://ionicframework.com/docs/theming/rtl-support/
-$app-direction: ltr;
-
-
+// Ionic Variables and Theming. For more info, please see: // http://ionicframework.com/docs/v2/theming/
+$font-path:"../assets/fonts";
 @import "ionic.globals";
-
-
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
 // the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
-
-
+// To view all the possible Ionic variables, see: // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -32,57 +13,129 @@ $app-direction: ltr;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
+$colors:(primary:#387ef5, secondary:#32db64, danger:#f53d3d, light:#f4f4f4, dark:#222);
+//custome variables start here
+// Color Start Here.
+$primary-color: #506a85;
+$secondary-color: #333333;
+$text-color: #666666;
+$white-color: #ffffff;
+$black-color: #000000;
+$light-green: #00bc9c;
+// Color Ends Here
+// Common css property Start Here
+$breakpoints: (small-xs:320px, medium-xs:360px, medium-a:400px, medium-b:480px, tab-small:500px);
+$f10-font-size: (null:10px, small-xs:08px, medium-xs:10px, medium-a:12px, medium-b:14px, tab-small:18px);
+$f11-font-size: (null:11px, small-xs:09px, medium-xs:11px, medium-a:13px, medium-b:15px, tab-small:19px);
+$f12-font-size: (null:12px, small-xs:10px, medium-xs:12px, medium-a:14px, medium-b:16px, tab-small:20px);
+$f13-font-size: (null:13px, small-xs:11px, medium-xs:13px, medium-a:15px, medium-b:17px, tab-small:21px);
+$f14-font-size: (null:14px, small-xs:12px, medium-xs:14px, medium-a:16px, medium-b:18px, tab-small:22px);
+$f15-font-size: (null:15px, small-xs:13px, medium-xs:15px, medium-a:17px, medium-b:19px, tab-small:23px);
+$f16-font-size: (null:16px, small-xs:14px, medium-xs:16px, medium-a:18px, medium-b:20px, tab-small:24px);
+$f17-font-size: (null:17px, small-xs:15px, medium-xs:17px, medium-a:19px, medium-b:21px, tab-small:25px);
+$f18-font-size: (null:18px, small-xs:16px, medium-xs:18px, medium-a:20px, medium-b:22px, tab-small:26px);
+$f19-font-size: (null:19px, small-xs:17px, medium-xs:19px, medium-a:21px, medium-b:23px, tab-small:27px);
+$f20-font-size: (null:20px, small-xs:18px, medium-xs:20px, medium-a:22px, medium-b:24px, tab-small:28px);
+$f21-font-size: (null:21px, small-xs:19px, medium-xs:21px, medium-a:23px, medium-b:25px, tab-small:29px);
+$f22-font-size: (null:22px, small-xs:20px, medium-xs:22px, medium-a:24px, medium-b:26px, tab-small:30px);
+$f23-font-size: (null:23px, small-xs:21px, medium-xs:23px, medium-a:25px, medium-b:27px, tab-small:31px);
+$f24-font-size: (null:24px, small-xs:22px, medium-xs:24px, medium-a:26px, medium-b:28px, tab-small:32px);
+$f25-font-size: (null:25px, small-xs:23px, medium-xs:25px, medium-a:27px, medium-b:29px, tab-small:33px);
+$f26-font-size: (null:26px, small-xs:24px, medium-xs:26px, medium-a:28px, medium-b:30px, tab-small:34px);
+$f27-font-size: (null:27px, small-xs:25px, medium-xs:27px, medium-a:29px, medium-b:31px, tab-small:35px);
+$f28-font-size: (null:28px, small-xs:26px, medium-xs:28px, medium-a:30px, medium-b:32px, tab-small:36px);
+$f29-font-size: (null:29px, small-xs:27px, medium-xs:29px, medium-a:31px, medium-b:33px, tab-small:37px);
+$f30-font-size: (null:30px, small-xs:28px, medium-xs:30px, medium-a:32px, medium-b:34px, tab-small:38px);
+$f31-font-size: (null:31px, small-xs:29px, medium-xs:31px, medium-a:33px, medium-b:35px, tab-small:39px);
+$f32-font-size: (null:32px, small-xs:30px, medium-xs:32px, medium-a:34px, medium-b:36px, tab-small:40px);
+$f33-font-size: (null:33px, small-xs:31px, medium-xs:33px, medium-a:35px, medium-b:37px, tab-small:41px);
+$f34-font-size: (null:34px, small-xs:32px, medium-xs:34px, medium-a:36px, medium-b:38px, tab-small:42px);
+$f35-font-size: (null:35px, small-xs:33px, medium-xs:35px, medium-a:37px, medium-b:39px, tab-small:43px);
+$f36-font-size: (null:36px, small-xs:34px, medium-xs:36px, medium-a:38px, medium-b:40px, tab-small:44px);
+$f37-font-size: (null:37px, small-xs:35px, medium-xs:37px, medium-a:39px, medium-b:41px, tab-small:45px);
+$f38-font-size: (null:38px, small-xs:36px, medium-xs:38px, medium-a:40px, medium-b:42px, tab-small:46px);
+$f39-font-size: (null:39px, small-xs:37px, medium-xs:39px, medium-a:41px, medium-b:43px, tab-small:47px);
+$f40-font-size: (null:40px, small-xs:38px, medium-xs:40px, medium-a:42px, medium-b:44px, tab-small:48px);
+$f44-font-size: (null:44px, small-xs:42px, medium-xs:44px, medium-a:46px, medium-b:48px, tab-small:52px);
+$f60-font-size: (null:60px, small-xs:62px, medium-xs:66px, medium-a:68px, medium-b:70px, tab-small:74px);
+// Common css property Ends Here
+// Font Family Start Here
+$fontRg: 'robotoregular';
+$fontMd: 'robotomedium';
+$fontBold: 'robotobold';
+$fontSemi: 'robotomedium';
+$fontThin: 'robotolight';
+$fontExBold: 'robotoblack';
+$fontLight: 'robotolight';
+// Font Family Ends Here
+// Font Family and Style Starts Here
+$font-weight-base: $fontMd, arial;
+$font-weight-md-base: $font-weight-base;
+// Font Family and Style Ends Here
+// label Color Start Here
+$label-md-text-color: $white-color;
+$label-md-text-color-focused: $white-color;
+$label-ios-text-color: $white-color;
+$label-ios-text-color-focused: $white-color;
+// label Color Ends Here
+// ToolBar Background Color Start Here
+$toolbar-md-background: $black-color;
+$toolbar-ios-background: $black-color;
+// ToolBar Background Color Ends Here
+// ToolBar Text Color Start Here
+$toolbar-md-text-color: $white-color;
+$toolbar-ios-text-color: $white-color;
+// ToolBar Text Color Start Here
+// ToolBar Title Font Size Start Here
+$toolbar-md-title-font-size: 20px;
+$toolbar-ios-title-font-size: 20px;
 
-$colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
-);
+// ToolBar Title Font Size Start Here
+@media screen and (max-width:320px) {
+	.toolbar-title.toolbar-title {
+		font-size: 17px;
+	}
 
+}
 
+/*** custom variables ***/
+
+/*** custom variables ***/
+
+// ToolBar Input Color Start Here
+$toolbar-md-title-text-color: $white-color;
+$toolbar-ios-title-text-color: $white-color;
+// ToolBar Input Color Ends Here
+$toolbar-ios-button-color: $white-color;
+$content-padding: 0;
+// Menu Header Background Color Start Here
+$menu-md-background: $black-color;
+// Menu Header Background Color Start Here
+//avatar
+$item-md-avatar-size: 50px;
 // App iOS Variables
+$toolbar-ios-height: 56px;
+$cordova-ios-statusbar-padding: 0;
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
-
-
-
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
-
-
-
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
-
-
-
 // App Theme
 // --------------------------------------------------
 // Ionic apps can have different themes applied, which can
 // then be future customized. This import comes last
 // so that the above variables are used and Ionic's
 // default are overridden.
-
 @import "ionic.theme.default";
-
-
 // Ionicons
 // --------------------------------------------------
-// The premium icon font for Ionic. For more info, please see:
-// http://ionicframework.com/docs/ionicons/
-
+// The premium icon font for Ionic. For more info, please see: // http://ionicframework.com/docs/v2/ionicons/
 @import "ionic.ionicons";
-
-
 // Fonts
 // --------------------------------------------------
-
 @import "roboto";
 @import "noto-sans";

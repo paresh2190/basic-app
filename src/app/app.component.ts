@@ -4,7 +4,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { AccordianListPage } from '../pages/accordian-list/accordian-list';
+import { FormElementsPage } from '../pages/form-elements/form-elements';
+import { ModalPopupPage } from '../pages/modal-popup/modal-popup';
+import { SwipeTabsPage } from '../pages/swipe-tabs/swipe-tabs';
+import { ParentTabPage } from '../pages/super-tabs/parent-tab/parent-tab';
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +28,13 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Super Tabs', component: ParentTabPage },
+      { title: 'Swipe Tabs', component: SwipeTabsPage },
+      { title: 'Accordion PrimeNg', component: AccordianListPage },
+      { title: 'Form', component: FormElementsPage },
+      { title: 'Modal Popup', component: ModalPopupPage }
+      
+      
     ];
 
   }

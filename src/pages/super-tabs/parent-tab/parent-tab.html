@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon class="icon-menu-ascending"></ion-icon>
+    </button>
+    <ion-title>Super Tabs</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="tabContainer">
+    <super-tabs scrollTabs>
+      <super-tab [root]="page1" title="Tab One"></super-tab>
+      <super-tab [root]="page2" title="Tab Two"></super-tab>
+      <super-tab [root]="page1" title="Tab Three"></super-tab>
+      <super-tab [root]="page2" title="Tab Four"></super-tab>
+      <super-tab [root]="page1" title="Tab Five"></super-tab>
+      <super-tab [root]="page2" title="Tab Six"></super-tab>
+      <super-tab [root]="page1" title="Tab Seven"></super-tab>
+      <super-tab [root]="page2" title="Tab Eight"></super-tab>
+      <super-tab [root]="page1" title="Tab Nine"></super-tab>
+      <super-tab [root]="page2" title="Tab Ten"></super-tab>
+    </super-tabs>
+  </div>
+</ion-content>

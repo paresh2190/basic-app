@@ -1,0 +1,79 @@
+super-tabs:not([no-shadow])>super-tabs-toolbar>ion-toolbar.toolbar::after {
+    height: auto;
+}
+
+super-tabs:not([no-shadow])>super-tabs-toolbar>ion-toolbar.toolbar::after, super-tabs:not([no-shadow])>super-tabs-toolbar>ion-toolbar.toolbar::before {
+    background-image: none;
+}
+
+/*** tab stratucure ***/
+.tabContainer {
+    height: 100%;
+}
+
+.tabDetails {
+    padding: 20px 15px;
+
+    img {
+        width: 100%;
+        display: block;
+        margin: 15px 0;
+    }
+
+}
+
+super-tabs {
+    .tab-buttons {
+        super-tab-button {
+            @include font-size($f12-font-size);
+            padding: 0 0 0px 0 !important;
+            height: auto !important;
+
+            .title {
+                background: $primary-color;
+                @include font-size($f16-font-size);
+                color: rgba($white-color, .50);
+                padding: 14px 3px;
+                line-height: 1.5 !important;
+                text-transform: capitalize;
+                opacity: 1 !important;
+            }
+
+            &.selected {
+                .title {
+                    background: $light-green;
+                    color: $white-color;
+                    position: relative;
+                    opacity: 1 !important;
+                }
+
+            }
+
+        }
+
+    }
+
+    .indicator {
+        background-color: transparent;
+    }
+
+    .toolbar::after {
+        content: none !important;
+    }
+
+}
+
+super-tabs:not([no-shadow])>super-tabs-toolbar>ion-toolbar.toolbar::after {
+    height: auto;
+}
+
+super-tabs-container {
+    height: 100% !important;
+
+    @include media-query-min(400px) {
+        height: 90% !important;
+    }
+
+}
+
+/*** tab stratucure end***/

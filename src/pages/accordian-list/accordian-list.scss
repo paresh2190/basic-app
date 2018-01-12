@@ -1,0 +1,23 @@
+page-accordian-list {
+	.ui-accordion {
+		.ui-accordion-header {
+			a {
+				background: $primary-color;
+				color: $white-color;
+				text-decoration: none;
+				padding: 20px 15px;
+				@include font-size($f16-font-size);
+			}
+
+			&.ui-state-active {
+				a {
+					background: $light-green;
+				}
+
+			}
+
+		}
+
+	}
+
+}

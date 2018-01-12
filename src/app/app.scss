@@ -1,6 +1,327 @@
-// http://ionicframework.com/docs/theming/
+// Fonts Style Start Here
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../assets/custom-fonts/roboto-black-webfont.woff2') format('woff2'), url('../assets/custom-fonts/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../assets/custom-fonts/roboto-bold-webfont.woff2') format('woff2'), url('../assets/custom-fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../assets/custom-fonts/roboto-light-webfont.woff2') format('woff2'), url('../assets/custom-fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../assets/custom-fonts/roboto-medium-webfont.woff2') format('woff2'), url('../assets/custom-fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../assets/custom-fonts/roboto-regular-webfont.woff2') format('woff2'), url('../assets/custom-fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.loading-content {
+    white-space: nowrap !important;
+}
+
+.scroll-content {
+    padding: 0 !important;
+}
+
+// mixin for font size
+@mixin font-size($fs-map,
+$fs-breakpoints:$breakpoints) {
+    @each $fs-breakpoint,
+    $fs-font-size in $fs-map {
+        @if $fs-breakpoint==null {
+            @include make-font-size($fs-font-size);
+        }
+        @else {
+            // If $fs-font-size is a key that exists in
+            // $fs-breakpoints, use the value
+            @if map-has-key($fs-breakpoints,
+            $fs-breakpoint) {
+                $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+            }
+            @media screen and (min-width:$fs-breakpoint) {
+                @include make-font-size($fs-font-size);
+            }
+        }
+    }
+}
+
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+    // If $fs-font-size is a list, include
+    @if type-of($fs-font-size)=="list" {
+        font-size: nth($fs-font-size, 1);
+    }
+    @else {
+        font-size: $fs-font-size;
+    }
+}
+
+// Flex Box Start Here
+@mixin display-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex-wrap($value) {
+    -webkit-flex-wrap: $value;
+    flex-wrap: $value;
+}
+
+@mixin flex-grow($value) {
+    -webkit-flex-grow: $value;
+    flex-grow: $value;
+}
+
+@mixin flex-shrink($value) {
+    -webkit-flex-shrink: $value;
+    flex-shrink: $value;
+}
+
+@mixin flex-basis($value) {
+    -webkit-flex-basis: $value;
+    flex-basis: $value;
+}
+
+@mixin flex($value) {
+    -webkit-flex: $value;
+    flex: $value;
+}
+
+@mixin justify-content($value) {
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}
+
+@mixin align-items($value) {
+    -webkit-align-items: $value;
+    align-items: $value;
+}
+
+@mixin flex-direction($value) {
+    -webkit-flex-direction: $value;
+    flex-direction: $value;
+}
+
+@mixin align-self($value) {
+    -webkit-align-self: $value;
+    align-self: $value;
+}
+
+// Flex Box Ends Here
+// Border Radius Start Here
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// Border Radius Start Here
+//Media Query
+@mixin media-query-min($arg) {
+    @media screen and (min-width: $arg) {
+        @content;
+    }
+}
+
+@mixin media-query-max($argM) {
+    @media screen and (max-width: $argM) {
+        @content;
+    }
+}
+
+// Object Property Start Here
+@mixin fill($value) {
+    -o-object-fit: $value;
+    object-fit: $value;
+}
+
+@mixin contain($value) {
+    -o-object-fit: $value;
+    object-fit: $value;
+}
+
+@mixin cover($value) {
+    -o-object-fit: $value;
+    object-fit: $value;
+}
+
+@mixin none($value) {
+    -o-object-fit: $value;
+    object-fit: $value;
+}
+
+@mixin scale-down($value) {
+    -o-object-fit: $value;
+    object-fit: $value;
+}
+
+// Object Property Ends Here
+@mixin transformY {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+@mixin transformXY {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+@mixin circleIcon {
+    @include border-radius(100px);
+    border: 1px solid #999;
+    padding: 5px;
+}
+
+@mixin grid ($cols,
+$mgn) {
+    float: $left;
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% - (($cols - 1) * $mgn)) / $cols);
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+}
+
+// Spin Start Here
+@mixin spin($dur,
+$dir: cw) {
+    $from: 0deg !default;
+    $to: 360deg !default;
+    @if $dir==ccw {
+        $from: 360deg;
+        $to: 0deg;
+    }
+    @keyframes spin-#{$dir} {
+        from {
+            transform: rotate($from);
+        }
+        to {
+            transform: rotate($to);
+        }
+    }
+    animation: spin-#{$dir} #{$dur}s linear infinite;
+}
+
+// Label Style overwrite Start Here
+.userForm .item-md.item-input.input-has-focus .item-inner,
+.userForm .item-ios.item-input.input-has-focus .item-inner,
+.userForm .item-wp.item-input.input-has-focus .item-inner {
+    border-bottom: 0 solid $black-color;
+    box-shadow: inherit;
+}
+
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child,
+.item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+.list-ios .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+    border-bottom: 0 solid $black-color;
+    box-shadow: inherit;
+}
+
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner,
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+    border-bottom: 0 solid $black-color;
+    box-shadow: inherit;
+}
+
+.list-md .item-input.input-has-focus:last-child {
+    border-bottom: 0 solid $black-color;
+    box-shadow: inherit;
+}
+
+.list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    box-shadow: inherit
+}
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    box-shadow: inherit;
+}
+
+// Button Start Here
+@mixin btn-properties() {
+    padding: 0px 0;
+    text-align: center;
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+}
+
+@mixin button($backgroud-color,
+$color,
+$radius) {
+    .button {
+        @include flex-grow(1);
+        @include flex-basis (0);
+        background: $backgroud-color;
+        color: $color;
+        margin: 0 auto;
+        padding: 15px 20px;
+        @include border-radius($radius);
+        @include font-size($f16-font-size);
+        box-shadow: none;
+        text-transform: uppercase;
+        height: auto;
+        font-family: $fontMd;
+    }
+}
+
+.black-btn {
+    @include btn-properties();
+    @include button($black-color,
+    $white-color,
+    10px);
+}
+
+.light-green-btn {
+    @include btn-properties();
+    @include button($light-green,
+    $white-color,
+    0px);
+}
+
+.headSearch {
+    [hidden] {
+        display: block !important;
+        visibility: hidden;
+    }
+}
 
 
+/***Transparent scrollbar End***/
+
+// Container Middle Ends Hrere
+// Label Style overwrite Ends Here
+// Spin Ends Here
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
