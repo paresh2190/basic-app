@@ -12,19 +12,14 @@ ion-app.md {
 [padding] h3:first-child,
 [padding] h4:first-child,
 [padding] h5:first-child,
-[padding] h6:first-child,
-{
-    margin-top: 0;
-}
-
-// common style
+[padding] h6:first-child // common style
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin: 0px;
+    margin: auto;
 }
 
 p {
