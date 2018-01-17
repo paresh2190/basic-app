@@ -1,0 +1,78 @@
+.mbsc-fr {
+	.mbsc-fr-btn-w {
+		width: 100%;
+		text-align: center;
+		border-right: 2px solid $white-color;
+
+		&:last-child {
+			border-right: 0;
+		}
+
+	}
+
+	.mbsc-fr-btn-cont {
+		background: $light-green;
+		display: flex;
+		padding: 0;
+	}
+
+	.mbsc-fr-btn-cont {
+		.mbsc-fr-btn {
+			padding: 0.2em 1em;
+			height: auto;
+			color: $white-color;
+			@include font-size($f16-font-size);
+		}
+
+	}
+
+	.mbsc-sc-itm {
+		padding: 3px 0;
+	}
+
+	.mbsc-sc-whl-l {
+		border-bottom: 2px solid $primary-color;
+		border-top: 2px solid $primary-color;
+	}
+
+	.mbsc-sc-itm {
+		@include font-size($f16-font-size);
+		text-align: left;
+		padding: 0;
+		margin: 0 1rem;
+		padding-top: 4px;
+
+		&.mbsc-ic-material-check {
+			padding-right: 45px;
+		}
+
+		&:first-child, &:last-child {
+			border-bottom: 0;
+		}
+
+	}
+
+	.mbsc-sc-whl-multi {
+		.mbsc-sc-itm {
+			padding: 0 0.4em;
+			white-space: normal;
+			overflow: inherit;
+		}
+
+		.mbsc-sc-itm-sel {
+			&:before {
+				color: $secondary-color;
+				right: 0;
+				left: auto;
+				@include font-size($f40-font-size);
+			}
+
+		}
+
+	}
+
+	.mbsc-sc-whl-gr {
+		padding: 0.5em 0;
+	}
+
+}

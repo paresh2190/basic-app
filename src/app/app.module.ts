@@ -1,11 +1,14 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/* primeng */
 import { AccordionModule } from 'primeng/components/accordion/accordion';
 import { MenuItem } from 'primeng/primeng';  
-
+/* mobiscroll */
+import { MbscModule, mobiscroll } from '../assets/lib/mobiscroll/js/mobiscroll.custom-4.0.0-beta2.min.js';
 
 
 import { MyApp } from './app.component';
@@ -35,12 +38,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Tab_2Page
     
   ],
-  imports: [
+  imports: [ 
+    FormsModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     SuperTabsModule.forRoot(),
     BrowserAnimationsModule,
-    AccordionModule
+    AccordionModule,
+    MbscModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -62,3 +67,4 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ]
 })
 export class AppModule {}
+export { mobiscroll }

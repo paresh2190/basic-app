@@ -1,17 +1,16 @@
-<!--
-  Generated template for the FormElementsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-  <ion-navbar>
-    <ion-title>Form</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Form</ion-title>
+    </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <div>
-    
-    
-  </div>
+    <div class="dateTime">
+        <h2>Form Elements with mobiscroll</h2>
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Date</ion-label>
+                <ion-input type="text" [(ngModel)]="myDate" mbsc-date [mbsc-options]="dateSettings" #mbscDate="mobiscroll"></ion-input>
+            </ion-item>
+        </ion-list>
+    </div>
 </ion-content>

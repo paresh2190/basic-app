@@ -22,6 +22,7 @@ $text-color: #666666;
 $white-color: #ffffff;
 $black-color: #000000;
 $light-green: #00bc9c;
+$gray-color: #cccccc;
 // Color Ends Here
 // Common css property Start Here
 $breakpoints: (small-xs:320px, medium-xs:360px, medium-a:400px, medium-b:480px, tab-small:500px);
@@ -69,7 +70,8 @@ $fontExBold: 'robotoblack';
 $fontLight: 'robotolight';
 // Font Family Ends Here
 // Font Family and Style Starts Here
-$font-weight-base: $fontMd, arial;
+$font-weight-base: $fontMd,
+arial;
 $font-weight-md-base: $font-weight-base;
 // Font Family and Style Ends Here
 // label Color Start Here
@@ -89,16 +91,16 @@ $toolbar-ios-text-color: $white-color;
 // ToolBar Title Font Size Start Here
 $toolbar-md-title-font-size: 20px;
 $toolbar-ios-title-font-size: 20px;
-
 // ToolBar Title Font Size Start Here
 @media screen and (max-width:320px) {
-	.toolbar-title.toolbar-title {
-		font-size: 17px;
-	}
-
+    .toolbar-title.toolbar-title {
+        font-size: 17px;
+    }
 }
 
+
 /*** custom variables ***/
+
 
 /*** custom variables ***/
 
