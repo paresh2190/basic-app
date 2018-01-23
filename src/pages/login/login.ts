@@ -22,10 +22,8 @@ export class LoginPage {
   }
   login(){
     this.existNum[0]=9821301169;
-    this.existNum[1]=9619492694;
-    this.existNum[2]=9619899048;
-    this.existNum[3]=9833218785;
-    this.existNum[4]=9833643211;
+    this.existNum[1]=1111111111;
+    
     
     var getNo = this.existNum.indexOf(parseInt(this.telNo));
     console.log(getNo)
