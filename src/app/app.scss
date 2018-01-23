@@ -316,6 +316,45 @@ $radius) {
     }
 }
 
+.alert-wrapper {
+    .alert-head {
+        padding: 20px;
+        .alert-title {
+            @include font-size($f18-font-size);
+            font-family: $fontBold;
+        }
+    }
+    .alert-message {
+        padding: 0 20px 20px;
+        @include font-size($f16-font-size);
+        color: $text-color;
+    }
+    .alert-button-group {
+        padding: 5px;
+        .alert-button {
+            @include font-size($f14-font-size);
+            background: $light-green;
+            color: $white-color;
+            width: 100%;
+            text-align: center;
+            margin-right: 0;
+            .button-inner {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.logOut {
+    background: none;
+    color: $white-color;
+    box-shadow: none;
+    @include font-size($f20-font-size);
+    margin-top: 2%;
+    position: relative;
+    z-index: 2;
+}
+
 
 /*
 .text-input::-webkit-input-placeholder {

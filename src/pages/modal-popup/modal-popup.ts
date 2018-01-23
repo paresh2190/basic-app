@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ModalPopupPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { PopupPage } from '../popup/popup';
 
 @Component({
   selector: 'page-modal-popup',
@@ -15,11 +8,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ModalPopupPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalPopupPage');
   }
+  openModal() {
+    console.log('test');
+    let myModal = this.modalCtrl.create(PopupPage);
+    myModal.present();
+  }
+  
 
 }

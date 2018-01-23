@@ -10,7 +10,7 @@ import { MenuItem } from 'primeng/primeng';
 /* mobiscroll */
 import { MbscModule, mobiscroll } from '../assets/lib/mobiscroll/js/mobiscroll.custom-4.0.0-beta2.min.js';
 
-
+import { CommonPage } from '../providers/common-funtions';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AccordianListPage } from '../pages/accordian-list/accordian-list';
@@ -20,6 +20,8 @@ import { SwipeTabsPage } from '../pages/swipe-tabs/swipe-tabs';
 import { ParentTabPage } from '../pages/super-tabs/parent-tab/parent-tab';
 import { Tab_1Page } from '../pages/super-tabs/tab-1/tab-1';
 import { Tab_2Page } from '../pages/super-tabs/tab-2/tab-2';
+import { PopupPage } from '../pages/popup/popup';
+import { LoginPage } from '../pages/login/login';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -35,7 +37,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SwipeTabsPage,
     ParentTabPage,
     Tab_1Page,
-    Tab_2Page
+    Tab_2Page,
+    PopupPage,
+    LoginPage
     
   ],
   imports: [ 
@@ -57,12 +61,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SwipeTabsPage,
     ParentTabPage,
     Tab_1Page,
-    Tab_2Page
+    Tab_2Page,
+    PopupPage,
+    LoginPage
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    CommonPage,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

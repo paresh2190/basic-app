@@ -9,6 +9,7 @@ import { FormElementsPage } from '../pages/form-elements/form-elements';
 import { ModalPopupPage } from '../pages/modal-popup/modal-popup';
 import { SwipeTabsPage } from '../pages/swipe-tabs/swipe-tabs';
 import { ParentTabPage } from '../pages/super-tabs/parent-tab/parent-tab';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -17,13 +18,25 @@ import { ParentTabPage } from '../pages/super-tabs/parent-tab/parent-tab';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
-  rootPage: any = HomePage;
+  rootPage: any;
+  
+  
 
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
+
+    let aKey = localStorage.getItem('user');
+
+    if(aKey=="9821301169"){
+      this.rootPage = HomePage
+    }
+    else{
+      this.rootPage = LoginPage
+    }
+
+
 
     // used for an example of ngFor and navigation
     this.pages = [
@@ -33,7 +46,6 @@ export class MyApp {
       { title: 'Accordion PrimeNg', component: AccordianListPage },
       { title: 'Form', component: FormElementsPage },
       { title: 'Modal Popup', component: ModalPopupPage }
-      
       
     ];
 
@@ -52,5 +64,10 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+  logOut(){
+    localStorage.clear();
+    console.log('clear log');
+    this.nav.setRoot(LoginPage);
   }
 }

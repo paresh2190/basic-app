@@ -1,0 +1,79 @@
+page-login {
+    .loginContainer {
+        padding: 20px 25px;
+        background: $logo-color;
+        height: 100%;
+    }
+    .loginForm {
+        @include display-flex;
+        @include flex-direction(column);
+        @include justify-content(center);
+        height: 100%;
+        h2 {
+            color: $white-color;
+            @include font-size($f60-font-size);
+            font-family: $fontBold;
+            margin: 0;
+            &:first-child {
+                margin: 0;
+            }
+        }
+        .light-green-btn {
+            margin-top: 20px;
+            .button {
+                border-radius: 5px;
+            }
+        }
+        .item {
+            &.item-block {
+                padding-left: 0;
+                margin-bottom: 5px;
+                background: none;
+                &.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) {
+                    .item-inner {
+                        border-bottom: 2px solid $white-color;
+                    }
+                }
+                .item-inner {
+                    padding-right: 0;
+                    border: 0;
+                    box-shadow: none;
+                    border-bottom: 1px solid $white-color;
+                    .label {
+                        color: $white-color;
+                        font-family: $fontMd;
+                    }
+                    .text-input {
+                        color: $white-color;
+                    }
+                    &:after {
+                        content: "";
+                        width: 0;
+                        height: 3px;
+                        background: $dark-color;
+                        position: absolute;
+                        bottom: -1px;
+                        transition: 0.4s all ease;
+                    }
+                }
+                &.item-input-has-focus {
+                    .item-inner {
+                        padding-right: 0;
+                        box-shadow: none;
+                        &:after {
+                            width: 100%;
+                            transition: 0.4s all ease;
+                        }
+                    }
+                }
+                &.item-input-has-focus .label-md[floating],
+                &.input-has-focus .label-md[floating],
+                &.item-input-has-value .label-md[floating],
+                &.input-has-value .label-md[floating] {
+                    transform: translate3d(0, 5px, 0) scale(0.8);
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<ion-content padding>
+    <div class="loginContainer">
+
+        <div class="loginForm">
+            <h2>EC CODE</h2>
+            <ion-item>
+                <ion-label color="primary" floating>Enter Mobile No.</ion-label>
+                <ion-input type="tel" [(ngModel)]="telNo" name="telno" #number="ngModel" required minlength="10" maxlength="10"></ion-input>
+            </ion-item>
+            <div class="light-green-btn">
+                <button [disabled]=!inputNumber.valid ion-button (click)="login()">Log In</button>
+            </div>
+        </div>
+    </div>
+</ion-content>
