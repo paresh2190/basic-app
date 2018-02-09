@@ -1,12 +1,15 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
-import {GoogleMaps,
+import {
+  GoogleMaps,
   GoogleMap,
-  LatLng,
   GoogleMapsEvent,
+  GoogleMapOptions,
   CameraPosition,
   MarkerOptions,
-  Marker} from '@ionic-native/google-maps';
+  Marker,
+  LatLng
+} from '@ionic-native/google-maps';
 
 
 @Component({
@@ -15,52 +18,55 @@ import {GoogleMaps,
 })
 export class MapPage {
 
-  @ViewChild('map')
-  private mapElement:ElementRef;
-  private map:GoogleMap;
-  private location:LatLng;
+  map: GoogleMap;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private platform: Platform) {
-    this.location = new LatLng(28.704059,77.102490);
+
+  constructor(private googleMaps: GoogleMaps) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MapPage');
-    this.platform.ready().then(() => {
-        let element = this.mapElement.nativeElement;
-        this.map = GoogleMaps.create(element);
-
-        this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
-          let option = {
-            target : this.location,
-            zoom: 18
-          };
-
-          
-          
-          setTimeout(()=>{ 
-            this.addMarker()
-          },3000);
-        });
-    });
+    this.loadMap();
   }
 
-  addMarker() {
-    this.map.addMarker({
-      title: 'My Marker',
-      //icon: 'assets/images/1.jpg',
-      icon: {url: "assets/images/map-icon.png", min: 11, max: 30 },
-      animation: 'Drop',
-      position: {
-      lat: this.location.lat,
-      lng: this.location.lng
+  loadMap() {
+
+    let mapOptions: GoogleMapOptions = {
+      camera: {
+        target: {
+          lat: 43.0741904,
+          lng: -89.3809802
+        },
+        zoom: 18,
+        tilt: 30
       }
-      })
-      .then(marker => {
-      marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-      alert('Marker Clicked');
+    };
+
+    this.map = GoogleMaps.create('map_canvas', mapOptions);
+
+    // Wait the MAP_READY before using any methods.
+    this.map.one(GoogleMapsEvent.MAP_READY)
+      .then(() => {
+        console.log('Map is ready!');
+
+        // Now you can use all methods safely.
+        this.map.addMarker({
+          title: 'My Marker',
+          //icon: 'assets/images/1.jpg',
+          icon: { url: "assets/images/map-icon.png", min: 11, max: 30 },
+          animation: 'Drop',
+          position: {
+            lat: 43.0741904,
+            lng: -89.3809802
+          }
+        })
+          .then(marker => {
+            marker.on(GoogleMapsEvent.MARKER_CLICK)
+              .subscribe(() => {
+                alert('Marker Clicked');
+              });
+          });
+
       });
-      });
-    }
+  }
 
 }

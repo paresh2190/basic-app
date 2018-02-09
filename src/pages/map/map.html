@@ -1,12 +1,15 @@
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Map</ion-title>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon class="icon-menu-ascending"></ion-icon>
+      </button>
+      <ion-title>Map</ion-title>
     </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <div #map style="height: 100%"></div>
+  <div style="height: 100%" id="map_canvas"></div>
 </ion-content>
