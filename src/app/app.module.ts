@@ -4,11 +4,13 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {GoogleMaps} from '@ionic-native/google-maps';
 /* primeng */
 import { AccordionModule } from 'primeng/components/accordion/accordion';
 import { MenuItem } from 'primeng/primeng';  
 /* mobiscroll */
 import { MbscModule, mobiscroll } from '../assets/lib/mobiscroll/js/mobiscroll.custom-4.0.0-beta2.min.js';
+
 
 import { CommonPage } from '../providers/common-funtions';
 import { MyApp } from './app.component';
@@ -22,6 +24,7 @@ import { Tab_1Page } from '../pages/super-tabs/tab-1/tab-1';
 import { Tab_2Page } from '../pages/super-tabs/tab-2/tab-2';
 import { PopupPage } from '../pages/popup/popup';
 import { LoginPage } from '../pages/login/login';
+import { MapPage } from '../pages/map/map';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -39,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Tab_1Page,
     Tab_2Page,
     PopupPage,
-    LoginPage
+    LoginPage,
+    MapPage
     
   ],
   imports: [ 
@@ -63,15 +67,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Tab_1Page,
     Tab_2Page,
     PopupPage,
-    LoginPage
+    LoginPage,
+    MapPage
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
     CommonPage,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
 export { mobiscroll }
+
+

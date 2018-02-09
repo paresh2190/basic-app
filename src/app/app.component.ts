@@ -10,6 +10,7 @@ import { ModalPopupPage } from '../pages/modal-popup/modal-popup';
 import { SwipeTabsPage } from '../pages/swipe-tabs/swipe-tabs';
 import { ParentTabPage } from '../pages/super-tabs/parent-tab/parent-tab';
 import { LoginPage } from '../pages/login/login';
+import { MapPage } from '../pages/map/map';
 
 
 
@@ -45,7 +46,8 @@ export class MyApp {
       { title: 'Swipe Tabs', component: SwipeTabsPage },
       { title: 'Accordion PrimeNg', component: AccordianListPage },
       { title: 'Form', component: FormElementsPage },
-      { title: 'Modal Popup', component: ModalPopupPage }
+      { title: 'Modal Popup', component: ModalPopupPage },
+      { title: 'Map', component: MapPage }
       
     ];
 
