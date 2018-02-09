@@ -1,0 +1,34 @@
+page-zing-chart {
+    #gauge {
+        height: 50vh;
+        width: 100vw;
+    }
+    #donutChart1 {
+        height: 50vh;
+        width: 100vw;
+    }
+    #gauge-tools,
+    #gauge-license-text,
+    #donutChart1-tools,
+    #donutChart1-license-text,
+    #donutChart2-tools,
+    #donutChart2-license-text,
+    #pieChart-tools,
+    #pieChart-license-text,
+    #pieChart-menu,  {
+        display: none !important;
+    }
+    .content {
+        h3 {
+            text-align: center;
+            margin: 0;
+            @include font-size($f20-font-size);
+            padding: 10px 0;
+            background: $secondary-color;
+            position: sticky;
+            top: -1px;
+            z-index: 99;
+            color: $white-color;
+        }
+    }
+}

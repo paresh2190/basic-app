@@ -1,40 +1,43 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>Form</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon class="icon-menu-ascending"></ion-icon>
+    </button>
+    <ion-title>Form</ion-title>
+  </ion-navbar>
 </ion-header>
 <ion-content padding>
-    <div class="dateTime">
-        <h3>Form Elements with mobiscroll</h3>
-        <div class="datebox">
-            <h2>Date and Time</h2>
-            <ion-list>
-                <ion-item>
-                    <ion-label floating>Date</ion-label>
-                    <ion-input type="text" [(ngModel)]="myDate" mbsc-date [mbsc-options]="dateSettings" #mbscDate="mobiscroll"></ion-input>
-                </ion-item>
-            </ion-list>
-        </div>
-        <div class="selectBox">
-            <h2>Select box</h2>
-            <ion-list>
-                <ion-item>
-                    <ion-label stacked>Single Select</ion-label>
-                    <ion-input type="text" [(ngModel)]="myCar" mbsc-select [mbsc-options]="singleSelectSettings" #mbscSingleSelect="mobiscroll"></ion-input>
-                </ion-item>
-                <ion-item>
-                    <ion-label stacked>Multiple Select</ion-label>
-                    <ion-input type="text" [(ngModel)]="myValues" mbsc-select [mbsc-options]="multiSelectSettings" #mbscMultiSelect="mobiscroll"></ion-input>
-                </ion-item>
-                <ion-item>
-                    <ion-label stacked>Group Select</ion-label>
-                    <ion-input type="text" [(ngModel)]="myValue" mbsc-select [mbsc-options]="selectSettings" #mbscSelect="mobiscroll"></ion-input>
-                </ion-item>
-                <ion-item>
-                    <ion-label stacked>Autocomplete</ion-label>
-                    <ion-input type="text" [(ngModel)]="airport" mbsc-select [mbsc-options]="selectAcSettings" #mbscAcSelect="mobiscroll"></ion-input>
-                </ion-item>
-            </ion-list>
-        </div>
+  <div class="dateTime">
+    <h3>Form Elements with mobiscroll</h3>
+    <div class="datebox">
+      <h2>Date and Time</h2>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Date</ion-label>
+          <ion-input type="text" [(ngModel)]="myDate" mbsc-date [mbsc-options]="dateSettings" #mbscDate="mobiscroll"></ion-input>
+        </ion-item>
+      </ion-list>
     </div>
+    <div class="selectBox">
+      <h2>Select box</h2>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>Single Select</ion-label>
+          <ion-input type="text" [(ngModel)]="myCar" mbsc-select [mbsc-options]="singleSelectSettings" #mbscSingleSelect="mobiscroll"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Multiple Select</ion-label>
+          <ion-input type="text" [(ngModel)]="myValues" mbsc-select [mbsc-options]="multiSelectSettings" #mbscMultiSelect="mobiscroll"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Group Select</ion-label>
+          <ion-input type="text" [(ngModel)]="myValue" mbsc-select [mbsc-options]="selectSettings" #mbscSelect="mobiscroll"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Autocomplete</ion-label>
+          <ion-input type="text" [(ngModel)]="airport" mbsc-select [mbsc-options]="selectAcSettings" #mbscAcSelect="mobiscroll"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
 </ion-content>
