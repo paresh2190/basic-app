@@ -4,12 +4,14 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {GoogleMaps} from '@ionic-native/google-maps';
 /* primeng */
 import { AccordionModule } from 'primeng/components/accordion/accordion';
 import { MenuItem } from 'primeng/primeng';  
 /* mobiscroll */
 import { MbscModule, mobiscroll } from '../assets/lib/mobiscroll/js/mobiscroll.custom-4.0.0-beta2.min.js';
 /* mobiscroll */
+
 
 import { CommonPage } from '../providers/common-funtions';
 import { MyApp } from './app.component';
@@ -24,6 +26,7 @@ import { Tab_2Page } from '../pages/super-tabs/tab-2/tab-2';
 import { PopupPage } from '../pages/popup/popup';
 import { LoginPage } from '../pages/login/login';
 import { ZingChartPage } from '../pages/zing-chart/zing-chart';
+import { MapPage } from '../pages/map/map';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -42,7 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Tab_2Page,
     PopupPage,
     LoginPage,
-    ZingChartPage
+    ZingChartPage,
+    MapPage
     
   ],
   imports: [ 
@@ -67,15 +71,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Tab_2Page,
     PopupPage,
     LoginPage,
-    ZingChartPage
+    ZingChartPage,
+    MapPage
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
     CommonPage,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
 export { mobiscroll }
+
+
