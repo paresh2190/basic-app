@@ -12,6 +12,7 @@ import { ParentTabPage } from '../pages/super-tabs/parent-tab/parent-tab';
 import { LoginPage } from '../pages/login/login';
 import { ZingChartPage } from '../pages/zing-chart/zing-chart';
 import { MapPage } from '../pages/map/map';
+import { AnimationPage } from '../pages/animation/animation';
 
 
 
@@ -49,7 +50,8 @@ export class MyApp {
       { title: 'Form', component: FormElementsPage },
       { title: 'Modal Popup', component: ModalPopupPage },
       { title: 'Gauge', component: ZingChartPage },
-      { title: 'Map', component: MapPage }
+      { title: 'Map', component: MapPage },
+      { title: 'Animation', component: AnimationPage }
       
     ];
 

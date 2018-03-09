@@ -11,6 +11,7 @@ import { MenuItem } from 'primeng/primeng';
 /* mobiscroll */
 import { MbscModule, mobiscroll } from '../assets/lib/mobiscroll/js/mobiscroll.custom-4.0.0-beta2.min.js';
 /* mobiscroll */
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 
 
 import { CommonPage } from '../providers/common-funtions';
@@ -27,6 +28,7 @@ import { PopupPage } from '../pages/popup/popup';
 import { LoginPage } from '../pages/login/login';
 import { ZingChartPage } from '../pages/zing-chart/zing-chart';
 import { MapPage } from '../pages/map/map';
+import { AnimationPage } from '../pages/animation/animation';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -46,7 +48,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PopupPage,
     LoginPage,
     ZingChartPage,
-    MapPage
+    MapPage,
+    AnimationPage
     
   ],
   imports: [ 
@@ -72,7 +75,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PopupPage,
     LoginPage,
     ZingChartPage,
-    MapPage
+    MapPage,
+    AnimationPage
     
   ],
   providers: [
@@ -80,6 +84,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     CommonPage,
     GoogleMaps,
+    NativePageTransitions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

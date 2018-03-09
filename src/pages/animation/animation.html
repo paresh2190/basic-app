@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon class="icon-menu-ascending"></ion-icon>
+    </button>
+        <ion-title>Animation</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="animationContainer">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolor omnis explicabo quam exercitationem illo voluptates dicta deleniti temporibus fugiat libero, eaque eveniet atque optio? Magni minima optio nesciunt deleniti.
+        </p>
+        <div class="light-green-btn" #btn1>
+            <button ion-button (click)="slidePage()">Slide</button>
+        </div>
+        <div class="light-green-btn">
+            <button ion-button (click)="flipPage()">Flip</button>
+        </div>
+        <div class="light-green-btn">
+            <button ion-button (click)="fadePage()">Fade</button>
+        </div>
+        <div class="light-green-btn">
+            <button ion-button (click)="curlPage()">Curl</button>
+        </div>
+    </div>
+</ion-content>
