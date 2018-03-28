@@ -29,7 +29,9 @@ import { LoginPage } from '../pages/login/login';
 import { ZingChartPage } from '../pages/zing-chart/zing-chart';
 import { MapPage } from '../pages/map/map';
 import { AnimationPage } from '../pages/animation/animation';
+import { ZoomImgPage } from '../pages/zoom-img/zoom-img';
 
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -49,7 +51,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ZingChartPage,
     MapPage,
-    AnimationPage
+    AnimationPage,
+    ZoomImgPage
     
   ],
   imports: [ 
@@ -59,7 +62,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SuperTabsModule.forRoot(),
     BrowserAnimationsModule,
     AccordionModule,
-    MbscModule
+    MbscModule,
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -76,7 +80,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ZingChartPage,
     MapPage,
-    AnimationPage
+    AnimationPage,
+    ZoomImgPage
     
   ],
   providers: [

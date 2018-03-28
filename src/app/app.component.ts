@@ -13,6 +13,7 @@ import { LoginPage } from '../pages/login/login';
 import { ZingChartPage } from '../pages/zing-chart/zing-chart';
 import { MapPage } from '../pages/map/map';
 import { AnimationPage } from '../pages/animation/animation';
+import { ZoomImgPage } from '../pages/zoom-img/zoom-img';
 
 
 
@@ -51,7 +52,8 @@ export class MyApp {
       { title: 'Modal Popup', component: ModalPopupPage },
       { title: 'Gauge', component: ZingChartPage },
       { title: 'Map', component: MapPage },
-      { title: 'Animation', component: AnimationPage }
+      { title: 'Animation', component: AnimationPage },
+      { title: 'Zoom Image', component: ZoomImgPage }
       
     ];
 
