@@ -30,9 +30,10 @@ import { ZingChartPage } from '../pages/zing-chart/zing-chart';
 import { MapPage } from '../pages/map/map';
 import { AnimationPage } from '../pages/animation/animation';
 import { ZoomImgPage } from '../pages/zoom-img/zoom-img';
-
+import { PieChartPage } from '../pages/pie-chart/pie-chart';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
-
+import { ChartsModule } from 'ng2-charts';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -52,7 +53,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ZingChartPage,
     MapPage,
     AnimationPage,
-    ZoomImgPage
+    ZoomImgPage,
+    PieChartPage
     
   ],
   imports: [ 
@@ -63,7 +65,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     BrowserAnimationsModule,
     AccordionModule,
     MbscModule,
-    IonicImageViewerModule
+    IonicImageViewerModule,
+    ChartsModule,
+    NgxChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -81,7 +85,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ZingChartPage,
     MapPage,
     AnimationPage,
-    ZoomImgPage
+    ZoomImgPage,
+    PieChartPage
     
   ],
   providers: [

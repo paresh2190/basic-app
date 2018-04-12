@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon class="icon-menu-ascending"></ion-icon>
+    </button>
+        <ion-title>Pie Chart</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <!-- <div style="display: block">
+        <canvas baseChart [data]="polarAreaChartData" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend" [chartType]="polarAreaChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div> -->
+    <div class="polar">
+        <ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="single" [legend]="showLegend" [explodeSlices]="explodeSlices" [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient" (select)="onSelect($event)">
+        </ngx-charts-pie-chart>
+    </div>
+</ion-content>

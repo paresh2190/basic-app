@@ -14,6 +14,7 @@ import { ZingChartPage } from '../pages/zing-chart/zing-chart';
 import { MapPage } from '../pages/map/map';
 import { AnimationPage } from '../pages/animation/animation';
 import { ZoomImgPage } from '../pages/zoom-img/zoom-img';
+import { PieChartPage } from '../pages/pie-chart/pie-chart';
 
 
 
@@ -53,7 +54,9 @@ export class MyApp {
       { title: 'Gauge', component: ZingChartPage },
       { title: 'Map', component: MapPage },
       { title: 'Animation', component: AnimationPage },
-      { title: 'Zoom Image', component: ZoomImgPage }
+      { title: 'Zoom Image', component: ZoomImgPage },
+      { title: 'Pie Chart', component: PieChartPage },
+
       
     ];
 
