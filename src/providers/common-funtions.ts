@@ -17,5 +17,6 @@ export class CommonPage {
           buttons: [buttons]
         });
         alert.present();
-      }
+    }
+  
 }

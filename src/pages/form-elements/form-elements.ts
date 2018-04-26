@@ -22,7 +22,7 @@ export class FormElementsPage {
 	myCar = 3;
 	singleSelectSettings = {
 		theme: 'material',
-		display: 'bottom',
+		display: 'center',
 		
 		data: [{
 			  text: 'Volvo',

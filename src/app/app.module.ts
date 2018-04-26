@@ -13,6 +13,11 @@ import { MbscModule, mobiscroll } from '../assets/lib/mobiscroll/js/mobiscroll.c
 /* mobiscroll */
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { ChartsModule } from 'ng2-charts';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { CommonPage } from '../providers/common-funtions';
 import { MyApp } from './app.component';
@@ -31,11 +36,8 @@ import { MapPage } from '../pages/map/map';
 import { AnimationPage } from '../pages/animation/animation';
 import { ZoomImgPage } from '../pages/zoom-img/zoom-img';
 import { PieChartPage } from '../pages/pie-chart/pie-chart';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { IonicImageViewerModule } from 'ionic-img-viewer';
-import { ChartsModule } from 'ng2-charts';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { CongratsPage } from '../pages/congrats/congrats';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MapPage,
     AnimationPage,
     ZoomImgPage,
-    PieChartPage
+    PieChartPage,
+    CongratsPage
     
   ],
   imports: [ 
@@ -86,7 +89,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MapPage,
     AnimationPage,
     ZoomImgPage,
-    PieChartPage
+    PieChartPage,
+    CongratsPage
     
   ],
   providers: [
