@@ -81,7 +81,6 @@ export class CongratsPage {
             rotationZ: R(180, -180),
             yoyo: true,
             ease: Linear.easeInOut,
-            
             delay: .1
 
           }, "-=8.1");
@@ -90,7 +89,6 @@ export class CongratsPage {
             rotationY: R(360, -180),
             yoyo: true,
             ease: Linear.easeInOut,
-           
             delay: .1
           }, "-=7");
         TweenMax.to(elm, R(1, 1), {
