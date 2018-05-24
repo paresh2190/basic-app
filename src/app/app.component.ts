@@ -39,7 +39,7 @@ export class MyApp {
       this.rootPage = CongratsPage
     }
     else{
-      this.rootPage = LoginPage
+      this.rootPage = CongratsPage
     }
 
 

@@ -37,7 +37,7 @@ export class CongratsPage {
       yPercent: "-50%"
     })
 
-    var total = 220;
+    var total = 50;
     var warp = document.getElementById("snowContainer"),
       w = '100%',
       h = 220;
@@ -61,13 +61,14 @@ export class CongratsPage {
       }
 
       function animm(elm) {
-        var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 16)) + ',' + (Math.floor(Math.random() * 206)) + ')';
-        var colors = ["red", "blue", "green", "purple", "pink", "yellow", "orange"];
+        var hue = '#' + ('fffff' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
+        //var hue = 'rgb("red")';
+        //var colors = ["red", "blue", "green", "purple", "pink", "yellow", "orange"];
         TweenMax.set(elm, {
           backgroundColor: hue
         });
         
-        TweenMax.to(elm, R(10, 3), {
+        TweenMax.to(elm, R(5, 3), {
           y: h + 45,
           opacity: R(.5, 1),
           scale: R(5, 1.25),
