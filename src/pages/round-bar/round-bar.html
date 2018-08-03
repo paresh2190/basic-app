@@ -1,0 +1,24 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>round bar</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="roundProgress">
+        <round-progress [current]="49" [max]="100" color="url(#sucess)" [background]="'#eaeaea'" [radius]="125" [rounded]="true" [stroke]="30"></round-progress>
+    </div>
+    <br>
+    <div class="roundProgress">
+        <round-progress [current]="79" [max]="100" color="url(#sucess)" [background]="'#eaeaea'" [radius]="125" [rounded]="true" [stroke]="30"></round-progress>
+    </div>
+</ion-content>
+<svg>
+  <linearGradient id="sucess" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="5%" stop-color="#a1e14d" />
+    <stop offset="95%" stop-color="#458d1f" />
+  </linearGradient>
+</svg>

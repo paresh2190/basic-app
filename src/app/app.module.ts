@@ -18,6 +18,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { ChartsModule } from 'ng2-charts';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
 import { CommonPage } from '../providers/common-funtions';
 import { MyApp } from './app.component';
@@ -37,6 +38,7 @@ import { AnimationPage } from '../pages/animation/animation';
 import { ZoomImgPage } from '../pages/zoom-img/zoom-img';
 import { PieChartPage } from '../pages/pie-chart/pie-chart';
 import { CongratsPage } from '../pages/congrats/congrats';
+import { RoundBarPage } from '../pages/round-bar/round-bar';
 
 
 @NgModule({
@@ -57,7 +59,8 @@ import { CongratsPage } from '../pages/congrats/congrats';
     AnimationPage,
     ZoomImgPage,
     PieChartPage,
-    CongratsPage
+    CongratsPage,
+    RoundBarPage
     
   ],
   imports: [ 
@@ -70,7 +73,8 @@ import { CongratsPage } from '../pages/congrats/congrats';
     MbscModule,
     IonicImageViewerModule,
     ChartsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    RoundProgressModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -90,7 +94,8 @@ import { CongratsPage } from '../pages/congrats/congrats';
     AnimationPage,
     ZoomImgPage,
     PieChartPage,
-    CongratsPage
+    CongratsPage,
+    RoundBarPage
     
   ],
   providers: [

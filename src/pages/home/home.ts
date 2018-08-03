@@ -6,9 +6,13 @@ import { NavController, MenuController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  setClass : any;
   constructor(public navCtrl: NavController, menu: MenuController) {
     menu.enable(true);
   }
   
+  fontSet(changeClass){
+    this.setClass = changeClass
+  }
+ 
 }

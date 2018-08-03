@@ -1,0 +1,7 @@
+page-round-bar {
+    .roundProgress {
+        @include display-flex;
+        @include justify-content(center);
+        margin: 25px 0;
+    }
+}

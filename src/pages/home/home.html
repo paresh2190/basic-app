@@ -10,12 +10,16 @@
     <div class="imgWrap">
         <img src="assets/images/3.jpg" alt="1">
     </div>
-    <div class="uiComponent">
+    <div class="uiComponent {{setClass}}">
         <h2>UI components</h2>
+        <button ion-button class="fontScale" (click)="fontSet('regular')">A</button>
+        <button ion-button class="fontScale" (click)="fontSet('medium')">A+</button>
+        <button ion-button class="fontScale" (click)="fontSet('large')">A++</button>
         <p>
             SLorem ipsum dolor sit amet consectetur adipisicing elit. Est aut eum accusantium laboriosam qui. Accusamus quibusdam necessitatibus ut beatae iure, quasi qui. Nobis molestiae, iste officia fuga vero nostrum nihil.
         </p>
     </div>
+
 </ion-content>
 <ion-footer>
     <div class="light-green-btn">

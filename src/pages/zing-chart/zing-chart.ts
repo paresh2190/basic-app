@@ -307,7 +307,7 @@ export class ZingChartPage {
         slice: "50%"
       },
       "series":[
-        {"values":[59]},
+        { "values": [59], "background-color": '#000000 #cc00ff'},
         {"values":[55]},
         {"values":[30]},
         {"values":[28]},

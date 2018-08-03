@@ -16,6 +16,7 @@ import { AnimationPage } from '../pages/animation/animation';
 import { ZoomImgPage } from '../pages/zoom-img/zoom-img';
 import { PieChartPage } from '../pages/pie-chart/pie-chart';
 import { CongratsPage } from '../pages/congrats/congrats';
+import { RoundBarPage } from '../pages/round-bar/round-bar';
 
 
 
@@ -36,10 +37,10 @@ export class MyApp {
     let aKey = localStorage.getItem('user');
 
     if(aKey=="9821301169"){
-      this.rootPage = CongratsPage
+      this.rootPage = HomePage
     }
     else{
-      this.rootPage = CongratsPage
+      this.rootPage = LoginPage
     }
 
 
@@ -58,6 +59,7 @@ export class MyApp {
       { title: 'Zoom Image', component: ZoomImgPage },
       { title: 'Pie Chart', component: PieChartPage },
       { title: 'Congrats', component: CongratsPage },
+      { title: 'Round Bar', component: RoundBarPage },
 
       
     ];
